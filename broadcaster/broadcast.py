@@ -83,11 +83,11 @@ def normalize_auth(raw_file: str) -> dict:
 # ------------------------------
 
 # RPC URL
-RPC_URL = "https://testnetbeta.aleorpc.com"
+RPC_URL = "https://mainnet.aleorpc.com"
 
 def get_program_code_string(program_name: str) -> str:
     """Fetch the `program_name` program details."""
-    response = requests.get(f"https://api.explorer.provable.com/v1/testnet/program/{program_name}")
+    response = requests.get(f"https://api.explorer.provable.com/v1/mainnet/program/{program_name}")
     return response.json()
 
 def rpc_request(payload: dict) -> str:
